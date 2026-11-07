@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="icons/icon48.png" alt="">
+      <div>
+        <h1 data-i18n="app_name"></h1>
+        <p id="status"></p>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="tr">TR</button>
+      </div>
+      <button id="off" class="off" data-i18n="off"></button>
+    </div>
+  </header>
+
+  <div class="search">
+    <svg viewBox="0 0 24 24" width="16" height="16"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M21 21l-4.3-4.3M10.5 18a7.5 7.5 0 110-15 7.5 7.5 0 010 15z"/></svg>
+    <input id="q" type="text" data-i18n-ph="search_ph" autocomplete="off">
+  </div>
+
+  <ul id="list"></ul>
+
+  <section class="up">
+    <div class="up-head">
+      <div>
+        <b data-i18n="upscale_title"></b>
+        <span data-i18n="upscale_sub"></span>
+      </div>
+      <label class="switch"><input type="checkbox" id="upOn"><i></i></label>
+    </div>
+    <label for="sharp" class="row"><span data-i18n="sharpness"></span> <b id="sharpVal">50%</b></label>
+    <input id="sharp" type="range" min="0" max="100" value="50">
+  </section>
+
+  <section class="up">
+    <div class="up-head" style="margin-bottom:0">
+      <div>
+        <b data-i18n="panel_title"></b>
+        <span data-i18n="panel_sub"></span>
+      </div>
+      <label class="switch"><input type="checkbox" id="panelOn"><i></i></label>
+    </div>
+  </section>
+
+  <footer>
+    <label for="amount"><span data-i18n="intensity"></span> <b id="amountVal">100%</b></label>
+    <input id="amount" type="range" min="0" max="100" value="100">
+  </footer>
+
+  <p class="hint" id="hint"></p>
+  <div id="toast"></div>
+  <script src="presets.js"></script>
+  <script src="i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
